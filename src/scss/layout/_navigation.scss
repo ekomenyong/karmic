@@ -1,0 +1,110 @@
+header.main-header {
+  margin: 1em;
+  .header-container {
+    .navbar-brand {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1em;
+      a.header-logo {
+        text-decoration: none;
+        img.custom-logo {
+          height: 40px;
+          width: auto;
+        }
+        h2.logo-name {
+          font-size: 40px;
+          line-height: 48px;
+          color: $text-color;
+        }
+      }
+      .menu-icon svg {
+        font-size: $size-4;
+        color: $dark;
+        &:hover, &:focus {
+          cursor: pointer;
+          animation: jelly 0.5s;
+        }
+      }
+      @include breakpoint( 'tablet' ) {
+        margin: 1em 2em;
+      }
+    }
+    .navbar-menu {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background: $dark;
+      overflow-x: hidden;
+      transition: 0.5s;
+      .overlay-header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1em 2em;
+        a.header-logo-overlay {
+          color: $white;
+          text-decoration: none;
+          img.custom-logo {
+            height: 40px;
+            width: auto;
+          }
+          h2 {
+            color: $white;
+            font-size: 40px;
+            line-height: 48px;
+          }
+        }
+        .close-btn {
+          font-size: $size-4;
+          color: $white;
+          &:hover , &:focus{
+            animation: jelly 0.5s;
+            cursor: pointer;
+          }
+        }
+        @include breakpoint( 'tablet' ) {
+          margin: 1em 3em;
+        }
+      }
+      .navbar-items {
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        justify-items: center;
+        position: relative;
+        top: 15%;
+        width: 100%;
+        text-align: center;
+        overflow-y: auto;
+        li.menu-item {
+          list-style-type: none;
+          text-transform: lowercase;
+          font-size: $size-2;
+          padding: 20px 0;
+          span {
+            color: $primary;
+            &:hover {
+              color: $white;
+            }
+          }
+          a {
+            text-decoration-line: none;
+            font-weight: $weight-semibold;
+            color: $white;
+            transition: $speed;
+          }
+          &:hover, &:focus {
+            cursor: pointer;
+            text-decoration-line: underline;
+          }
+        }
+      }
+    }
+  }
+}

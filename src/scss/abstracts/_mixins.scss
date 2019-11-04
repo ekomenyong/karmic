@@ -1,0 +1,45 @@
+// Breakpoint Mixin
+@mixin breakpoint( $breakpoint ) {
+  $raw-query: map-get( $breakpoints, $breakpoint );
+
+  @if $raw-query {
+    $query: if(
+      type-of( $raw-query ) == 'string',
+      unquote( $raw-query ),
+      inspect( $raw-query )
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+/** 
+ * 
+ * Implement linear CSS gradient
+ * 
+ * @type mixin
+ * 
+ * @param $start-color   Use a variable or hex code 
+ * @param $end-color     Use a variable or hex code 
+ * @param $orientation   The orientation of the gradient (vertical, horizontal)
+ * 
+ * Example Usage: @include gradient(#07c, #06f, vertical);
+ */
+@mixin gradient( $start-color, $end-color, $orientation ) {
+  background: $start-color;
+  @if $orientation == 'vertical' {
+    background: -webkit-linear-gradient( top, $start-color, $end-color );
+    background: linear-gradient( to bottom, $start-color, $end-color );
+  } @else if $orientation == 'horizontal' {
+    background: -webkit-linear-gradient( left, $start-color, $end-color );
+    background: linear-gradient( to right, $start-color, $end-color );
+  } @else {
+    background: -webkit-radial-gradient( center, ellipse cover, $start-color, $end-color );
+    background: radial-gradient( ellipse at center, $start-color, $end-color );
+  }
+}

@@ -1,0 +1,88 @@
+// Default Font Family
+$heading-font:        'Silka', serif !default;
+$body-font:           'Silka', serif !default;
+
+// Font Sizes
+$size-1:              4.5rem !default;
+$size-2:              3.5rem !default;
+$size-3:              3.0rem !default;
+$size-4:              2.5rem !default;
+$size-5:              2.0rem !default;
+$size-6:              1.5rem !default;
+$size-7:              1.0rem !default;
+
+$small:               0.8rem;
+
+// Font Weights
+$weight-thin:         100 !default;
+$weight-xlight:       200 !default;
+$weight-light:        300 !default;
+$weight-regular:      400 !default;
+$weight-medium:       500 !default;
+$weight-semibold:     600 !default;
+$weight-bold:         700 !default;
+$weight-black:        800 !default;
+$weight-heavy:        800 !default;
+
+// Links
+$link:                $primary !default;
+$link-visited:        $primary !default;
+
+$link-hover:          $grey !default;
+$link-hover-border:   $grey !default;
+
+$link-active:         $dark !default;
+$link-active-border:  $dark !default;
+
+$text-color:          $dark-light;
+$text-light:          $grey;
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $dark;
+  margin: 0;
+  padding:0;
+  line-height: 1.2;
+  font-family: $heading-font;
+  text-transform: lowercase;
+}
+h1, h2, h1 a, h2 a {
+  font-weight: $weight-bold;
+}
+
+h1 {
+  font-size: $size-1;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: $size-2;
+  line-height: 64px;
+  color: $primary;
+}
+
+h3 {
+  font-size: $size-3;
+  line-height: 56px;
+  color: $dark-grey;
+  font-weight: $weight-medium;
+}
+
+h4 {
+  font-size: $size-4;
+  line-height: 48px;
+  font-style: italic;
+  font-weight: $weight-medium;
+}
+h5 {
+  font-size: $size-5;
+  line-height: 40px;
+  font-weight: $weight-regular;
+}
+h6 {
+  font-size: $size-6;
+  line-height: 32px;
+  font-style: italic;
+  font-weight: $weight-regular;
+  color: $primary;
+}

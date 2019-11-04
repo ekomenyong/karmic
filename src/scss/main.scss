@@ -1,0 +1,20 @@
+/**
+ * This is your main.scss file. Import all other scss files here.  
+ * 
+ * @package karmic
+ * @version 1.0.0
+ */
+
+@import 'abstracts/normalize';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/fonts';
+@import 'abstracts/animations';
+
+@import 'base/typography';
+@import 'base/generic';
+
+@import 'layout/navigation';
+//  @import 'layout/hero';
+//  @import 'layout/frontpage';
+//  @import 'layout/page';

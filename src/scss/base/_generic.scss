@@ -1,0 +1,240 @@
+// Base Styles
+$body-size: 16px !default;
+$body-rendering: optimizeLegibility !default;
+$body-family: $body-font !default;
+$body-weight: $weight-regular !default;
+$body-line-height: 1.2 !default;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: $background;
+  font-size: $body-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: $body-rendering;
+  text-size-adjust: 100%;
+  padding: 0;
+  margin:0;
+  display: block;
+  scroll-behavior: smooth;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: $body-family;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+body {
+  color: $text-color;
+  font-weight: $body-weight;
+  line-height: $body-line-height;
+  font-family: $body-family;
+}
+
+hr {
+  border: 0.75px solid $grey;
+  margin: 1em auto;
+  width: 80%;
+  .page-hr {
+    border-color: $grey;
+  }
+  .section-divider {
+    width: 50%;
+    margin: 2em auto;
+  }
+}
+
+// Inline Styles
+p {
+  color: $text-color;
+  font-size: 18px;
+  font-weight: $weight-regular;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+a {
+  color: $link;
+  cursor: pointer;
+  font-weight: $weight-regular;
+  transition: $speed;
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: $small;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 1em;
+  border-left: 0.2em solid rgba($primary, 0.4);
+  padding-left: 1em;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-style: bold;
+}
+
+ol {
+  padding-bottom: 1em;
+  margin: 0;
+  li {
+    list-style-type: none;
+  }
+}
+ul {
+  padding-bottom: 1em;
+  margin: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.section-heading {
+  margin: 2em;
+  .section-title {
+    margin: 0;
+    max-width: 450px;
+    text-transform: lowercase;
+  }
+  .section-subtitle {
+    margin: 0;
+    max-width: 450px;
+    font-size: $size-5;
+  }
+  .section-heading-hr {
+    width: 5%;
+    margin: auto;
+  }
+}
+
+// Image Filters
+.blur {
+  filter: blur(4px);
+}
+.brightness {
+  filter: brightness(250%);
+}
+.contrast {
+  filter: contrast(180%);
+}
+.grayscale {
+  filter: grayscale(100%);
+}
+.huerotate {
+  filter: hue-rotate(180deg);
+}
+.invert {
+  filter: invert(100%);
+}
+.opacity {
+  filter: opacity(50%);
+}
+.saturate {
+  filter: saturate(7);
+}
+.sepia {
+  filter: sepia(100%);
+}
+.shadow {
+  filter: drop-shadow(8px 8px 10px green);
+}
+
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignright {
+  float: right;
+}
+.alignleft {
+  float: left;
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Container Styles
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* For devices larger than phablet */
+  @include breakpoint("tablet") {
+    .container {
+      width: 100%;
+    }
+  }
+}
+.container-fluid {
+  width: 100%;
+  margin: 0 2em;
+  padding: 0;
+}

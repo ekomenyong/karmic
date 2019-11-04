@@ -1,0 +1,43 @@
+// Colors
+$red:               #FF3B30 !default;
+$orange:            #FF9500 !default;
+$yellow:            #FFCC00 !default;
+$green:             #4CD964 !default;
+$teal:              #5AC8FA !default;
+$blue:              #007AFF !default;
+$violet:            #5856D6 !default;
+
+$black:             #000000 !default;
+$dark:              #1b1b1b !default;
+$dark-light:        #333333 !default;
+
+$dark-grey:         #555555 !default;
+$grey:              #999999 !default;
+$light-grey:        #D5D6D5 !default;
+
+$light:             #f8f8f8 !default;
+$white:             #ffffff !default;
+
+// Theme Colors
+$background:          $white !default;
+$primary:           #DA1D45;
+
+// Misc
+$easing:              ease-out !default;
+$radius-small:        8px !default;
+$radius:              16px !default;
+$radius-large:        32px !default;
+$radius-rounded:      290486px !default;
+$speed:               330ms !default;
+
+$border:              $light-grey !default;
+$border-hover:        $light-grey!default;
+ 
+// Responsive Breakpoints
+$breakpoints: (
+  // Larger than...
+  'mobile':           ( min-width: 416px ),
+  'h-mobile':         ( min-width: 560px ),
+  'tablet':           ( min-width: 768px ),
+  'desktop':          ( min-width: 1024px ),
+  'xl-desktop':       ( min-width: 1440px ) ) !default;
