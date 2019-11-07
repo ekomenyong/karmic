@@ -1,5 +1,4 @@
 header.main-header {
-  margin: 1em;
   .header-container {
     .navbar-brand {
       display: flex;
@@ -68,9 +67,6 @@ header.main-header {
             cursor: pointer;
           }
         }
-        @include breakpoint( 'tablet' ) {
-          margin: 1em 3em;
-        }
       }
       .navbar-items {
         display: flex;
@@ -85,7 +81,7 @@ header.main-header {
         li.menu-item {
           list-style-type: none;
           text-transform: lowercase;
-          font-size: $size-2;
+          font-size: $size-3;
           padding: 20px 0;
           span {
             color: $primary;

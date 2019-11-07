@@ -21,8 +21,6 @@ if ( ! function_exists( 'karmic_scripts' ) ) {
       
     $css_version = $theme_version . '.' . filemtime( KARMIC_THEMEROOT . '/assets/css/main.min.css' );
       wp_enqueue_style( 'karmic-styles', KARMIC_THEME_DIR . '/assets/css/main.min.css', array(), $css_version );
-      wp_enqueue_style( 'acf-styles', KARMIC_THEME_DIR . '/lib/acf/acf-styles.php', array(), 'all' );
-      //wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:400,600&display=swap', array(), 0.1);
       
       wp_deregister_script( 'jquery' );
       

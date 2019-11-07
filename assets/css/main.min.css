@@ -49,24 +49,25 @@ template{display:none}
 @font-face{font-family:"Silka";src:url("/assets/fonts/Silka-Black.eot");src:url("/assets/fonts/Silka-Black.eot?#iefix") format("embedded-opentype"),url("/assets/fonts/Silka-Black.woff2") format("woff2"),url("/assets/fonts/Silka-Black.woff") format("woff"),url("/assets/fonts/Silka-Black.ttf") format("truetype"),url("/assets/fonts/Silka-Black.svg#Silka-Black") format("svg");font-weight:800;font-style:normal}
 @font-face{font-family:"Silka";src:url("/assets/fonts/Silka-BlackItalic.eot");src:url("/assets/fonts/Silka-BlackItalic.eot?#iefix") format("embedded-opentype"),url("/assets/fonts/Silka-BlackItalic.woff2") format("woff2"),url("/assets/fonts/Silka-BlackItalic.woff") format("woff"),url("/assets/fonts/Silka-BlackItalic.ttf") format("truetype"),url("/assets/fonts/Silka-BlackItalic.svg#Silka-BlackItalic") format("svg");font-weight:800;font-style:italic}
 .bounce-h{-webkit-animation:bouncehoriz 2s infinite;animation:bouncehoriz 2s infinite}
-h1,h2,h3,h4,h5,h6{color:#1b1b1b;margin:0;padding:0;line-height:1.2;font-family:"Silka",serif;text-transform:lowercase}
+h1,h2,h3,h4,h5,h6{color:#1b1b1b;margin:0;padding:0;font-family:"Silka",serif;text-transform:lowercase}
 h1,h2,h1 a,h2 a{font-weight:700}
-h1{font-size:4.5rem;line-height:80px}
-h2{font-size:3.5rem;line-height:64px;color:#da1d45}
-h3{font-size:3rem;line-height:56px;color:#555;font-weight:500}
-h4{font-size:2.5rem;line-height:48px;font-style:italic;font-weight:500}
-h5{font-size:2rem;line-height:40px;font-weight:400}
-h6{font-size:1.5rem;line-height:32px;font-style:italic;font-weight:400;color:#da1d45}
+h1{font-size:4.5rem}
+h2{font-size:3.5rem;color:#da1d45}
+h3{font-size:3rem;color:#555;font-weight:500}
+h4{font-size:2.5rem;font-style:italic;font-weight:500}
+h5{font-size:2rem;font-weight:400}
+h6{font-size:1.5rem;font-style:italic;font-weight:400;color:#da1d45}
 *,*:before,*:after{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{background:#fff;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;padding:0;margin:0;display:block;scroll-behavior:smooth}
 article,aside,figure,footer,header,hgroup,section{display:block}
 body,input,select,textarea{font-family:"Silka",serif}
 embed,iframe,img,object,video{max-width:100%}
-body{color:#333;font-weight:400;line-height:1.2;font-family:"Silka",serif}
+body{color:#333;font-weight:400;font-family:"Silka",serif}
 hr{border:.75px solid #999;margin:1em auto;width:80%}
 hr .page-hr{border-color:#999}
 hr .section-divider{width:50%;margin:2em auto}
-p{color:#333;font-size:18px;font-weight:400;line-height:1.3;letter-spacing:1px}
+section{padding:5em 0}
+p{color:#333;font-size:20px;font-weight:400;line-height:1.15;letter-spacing:1px}
 a{color:#da1d45;cursor:pointer;font-weight:400;-webkit-transition:330ms;transition:330ms}
 a:hover{color:#999}
 img{height:auto;max-width:100%}
@@ -80,10 +81,6 @@ ol{padding-bottom:1em;margin:0}
 ol li{list-style-type:none}
 ul{padding-bottom:1em;margin:0}
 ul li{list-style-type:none}
-.section-heading{margin:2em}
-.section-heading .section-title{margin:0;max-width:450px;text-transform:lowercase}
-.section-heading .section-subtitle{margin:0;max-width:450px;font-size:2rem}
-.section-heading .section-heading-hr{width:5%;margin:auto}
 .blur{-webkit-filter:blur(4px);filter:blur(4px)}
 .brightness{-webkit-filter:brightness(250%);filter:brightness(250%)}
 .contrast{-webkit-filter:contrast(180%);filter:contrast(180%)}
@@ -102,7 +99,9 @@ img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 .aligncenter{display:block;margin-left:auto;margin-right:auto}
 .container{position:relative;width:90%;max-width:1024px;margin:0 auto;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}
 .container-fluid{width:100%;margin:0 2em;padding:0}
-header.main-header{margin:1em}
+.highlight{color:#da1d45}
+.red{background:#da1d45}
+.dark{background:#333}
 header.main-header .header-container .navbar-brand{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:1em}
 header.main-header .header-container .navbar-brand a.header-logo{text-decoration:none}
 header.main-header .header-container .navbar-brand a.header-logo img.custom-logo{height:40px;width:auto}
@@ -117,14 +116,43 @@ header.main-header .header-container .navbar-menu .overlay-header a.header-logo-
 header.main-header .header-container .navbar-menu .overlay-header .close-btn{font-size:2.5rem;color:#fff}
 header.main-header .header-container .navbar-menu .overlay-header .close-btn:hover,header.main-header .header-container .navbar-menu .overlay-header .close-btn:focus{-webkit-animation:jelly .5s;animation:jelly .5s;cursor:pointer}
 header.main-header .header-container .navbar-menu .navbar-items{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;-ms-flex-line-pack:center;align-content:center;justify-items:center;position:relative;top:15%;width:100%;text-align:center;overflow-y:auto}
-header.main-header .header-container .navbar-menu .navbar-items li.menu-item{list-style-type:none;text-transform:lowercase;font-size:3.5rem;padding:20px 0}
+header.main-header .header-container .navbar-menu .navbar-items li.menu-item{list-style-type:none;text-transform:lowercase;font-size:3rem;padding:20px 0}
 header.main-header .header-container .navbar-menu .navbar-items li.menu-item span{color:#da1d45}
 header.main-header .header-container .navbar-menu .navbar-items li.menu-item span:hover{color:#fff}
 header.main-header .header-container .navbar-menu .navbar-items li.menu-item a{-webkit-text-decoration-line:none;text-decoration-line:none;font-weight:600;color:#fff;-webkit-transition:330ms;transition:330ms}
 header.main-header .header-container .navbar-menu .navbar-items li.menu-item:hover,header.main-header .header-container .navbar-menu .navbar-items li.menu-item:focus{cursor:pointer;-webkit-text-decoration-line:underline;text-decoration-line:underline}
-@media(min-width:768px){.container .container{width:100%}
+main{margin:0}
+main section.hero{margin:2em;height:80vh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+main section.hero .hero-content{margin-bottom:2em}
+main section.hero .hero-content .hero-title{font-size:2rem}
+main section.hero .hero-content .hero-subtitle{font-size:1.25rem;line-height:1.2}
+main section.hero .hero-img img{width:100%;height:auto;padding:1em}
+main section.about{padding:5em 2em;background:#1b1b1b;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+main section.about .about-title{margin-bottom:2em}
+main section.about .about-title h2{font-size:2.5rem;color:#fff}
+main section.about .about-subtitle p{color:#fff}
+main section.services{margin:0 2em;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+main section.services .services-content{-ms-flex-preferred-size:35%;flex-basis:35%}
+main section.services .services-grid{-ms-flex-preferred-size:65%;flex-basis:65%;-ms-flex-item-align:end;align-self:flex-end}
+main section.services .services-grid .cards{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+main section.services .services-grid .cards .card{margin:.5em;padding:1em;border-radius:8px;-ms-flex-preferred-size:256px;flex-basis:256px}
+main section.services .services-grid .cards .card .icon svg{color:#fff;margin-bottom:1em}
+main section.services .services-grid .cards .card .card-title{color:#fff;font-size:1.5rem;text-transform:capitalize;padding-bottom:1em}
+main section.services .services-grid .cards .card .card-subtitle{color:#fff;font-size:1rem}
+@media(min-width:560px){main section.hero .hero-content{-ms-flex-preferred-size:40%;flex-basis:40%}
+main section.hero .hero-img{-ms-flex-preferred-size:60%;flex-basis:60%}
+main section.hero{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:1em 2em}
+}@media(min-width:768px){.container .container{width:100%}
 header.main-header .header-container .navbar-brand{margin:1em 2em}
-header.main-header .header-container .navbar-menu .overlay-header{margin:1em 3em}
+main section.hero .hero-content{-ms-flex-preferred-size:45%;flex-basis:45%;margin:0}
+main section.hero .hero-content .hero-title{font-size:3.5rem}
+main section.hero .hero-content .hero-subtitle{font-size:1.5rem}
+main section.hero .hero-img{-ms-flex-preferred-size:55%;flex-basis:55%}
+main section.about{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
+main section.about .about-title{margin:0}
+main section.about .about-subtitle p{padding-left:2em}
+main section.services{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+}@media(min-width:1024px){main section.hero .hero-content .hero-subtitle{font-size:2rem}
 }@-webkit-keyframes bouncehoriz{0%,20%,50%,80%,100%{-webkit-transform:translateX(0);transform:translateX(0)}
 40%{-webkit-transform:translateX(-30px);transform:translateX(-30px)}
 60%{-webkit-transform:translateX(-15px);transform:translateX(-15px)}

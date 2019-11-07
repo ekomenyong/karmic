@@ -42,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
   color: $dark;
   margin: 0;
   padding:0;
-  line-height: 1.2;
   font-family: $heading-font;
   text-transform: lowercase;
 }
@@ -52,36 +51,30 @@ h1, h2, h1 a, h2 a {
 
 h1 {
   font-size: $size-1;
-  line-height: 80px;
 }
 
 h2 {
   font-size: $size-2;
-  line-height: 64px;
   color: $primary;
 }
 
 h3 {
   font-size: $size-3;
-  line-height: 56px;
   color: $dark-grey;
   font-weight: $weight-medium;
 }
 
 h4 {
   font-size: $size-4;
-  line-height: 48px;
   font-style: italic;
   font-weight: $weight-medium;
 }
 h5 {
   font-size: $size-5;
-  line-height: 40px;
   font-weight: $weight-regular;
 }
 h6 {
   font-size: $size-6;
-  line-height: 32px;
   font-style: italic;
   font-weight: $weight-regular;
   color: $primary;
