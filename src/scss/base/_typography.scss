@@ -4,11 +4,11 @@ $body-font:           'Silka', serif !default;
 
 // Font Sizes
 $size-1:              4.5rem !default;
-$size-2:              3.5rem !default;
-$size-3:              3.0rem !default;
-$size-4:              2.5rem !default;
-$size-5:              2.0rem !default;
-$size-6:              1.5rem !default;
+$size-2:              3.0rem !default;
+$size-3:              2.5rem !default;
+$size-4:              2.0rem !default;
+$size-5:              1.5rem !default;
+$size-6:              1.25rem !default;
 $size-7:              1.0rem !default;
 
 $small:               0.8rem;
@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
   font-family: $heading-font;
   text-transform: lowercase;
+  line-height: 1.1;
 }
 h1, h2, h1 a, h2 a {
   font-weight: $weight-bold;
@@ -60,7 +61,6 @@ h2 {
 
 h3 {
   font-size: $size-3;
-  color: $dark-grey;
   font-weight: $weight-medium;
 }
 
@@ -78,4 +78,36 @@ h6 {
   font-style: italic;
   font-weight: $weight-regular;
   color: $primary;
+}
+
+.bold {
+  font-weight: $weight-bold;
+}
+.semi-bold {
+  font-weight: $weight-semibold;
+}
+
+.italic {
+  font-style: italic;
+}
+.highlight {
+  color: $primary;
+}
+.highlight-dark {
+  color: $dark;
+}
+.highlight-white {
+  color: $white;
+}
+.red {
+  background: $primary;
+}
+.dark {
+  background: $dark;
+}
+.white {
+  background: $white;
+}
+.center {
+  text-align: center;
 }

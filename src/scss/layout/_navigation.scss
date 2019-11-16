@@ -1,4 +1,5 @@
-header.main-header {
+header.karmic-header {
+  margin: 1em;
   .header-container {
     .navbar-brand {
       display: flex;
@@ -34,11 +35,11 @@ header.main-header {
       height: 0%;
       width: 100%;
       position: fixed;
-      z-index: 1;
+      z-index: 99;
       left: 0;
       top: 0;
-      background: $dark;
-      overflow-x: hidden;
+      background: $primary;
+      overflow-y: auto;
       transition: 0.5s;
       .overlay-header {
         display: flex;
@@ -67,6 +68,9 @@ header.main-header {
             cursor: pointer;
           }
         }
+        @include breakpoint( 'tablet' ) {
+          margin: 1em 3em;
+        }
       }
       .navbar-items {
         display: flex;
@@ -82,7 +86,7 @@ header.main-header {
           list-style-type: none;
           text-transform: lowercase;
           font-size: $size-3;
-          padding: 20px 0;
+          padding: 16px 0;
           span {
             color: $primary;
             &:hover {

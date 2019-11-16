@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: $weight-medium;
+  padding: 0.8rem 1.5rem;
+  border-radius: $radius-large;
+  background: $primary;
+  color: $white;
+  letter-spacing: 1.1px;
+  text-decoration-line: none;
+  &:hover {
+    color:$white;
+    cursor: pointer;
+    animation: jelly 0.5s;
+  }
+}

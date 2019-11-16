@@ -30,7 +30,7 @@
  * 
  * Example Usage: @include gradient(#07c, #06f, vertical);
  */
-@mixin gradient( $start-color, $end-color, $orientation ) {
+@mixin bg-gradient( $start-color, $end-color, $orientation ) {
   background: $start-color;
   @if $orientation == 'vertical' {
     background: -webkit-linear-gradient( top, $start-color, $end-color );
@@ -41,5 +41,12 @@
   } @else {
     background: -webkit-radial-gradient( center, ellipse cover, $start-color, $end-color );
     background: radial-gradient( ellipse at center, $start-color, $end-color );
+  }
+}
+
+// Animate the caret for the typerwriter effect in the hero
+@keyframes caret {
+  50% {
+    border-color: transparent;
   }
 }

@@ -8,7 +8,7 @@
   "license": "UNLICENSED",
   "private": true,
   "vars": {
-    "projectURL": "karmic.local",
+    "projectURL": "karmic.site",
     "productURL": "./",
     "browserAutoOpen": false,
     "injectChanges": true,

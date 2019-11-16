@@ -1,0 +1,93 @@
+footer {
+  padding: 4rem 2rem;
+  .main-footer {
+    padding: 0;
+    text-align: center;
+    a.footer-logo-link {
+      .footer-logo {
+        width: 168px;
+      }
+      @include breakpoint('desktop') {
+        grid-area: logo;
+      }
+    }
+    .footer-nav {
+      .footer-navbar-items {
+        .menu-item {
+          padding-top: 2rem;
+          @include breakpoint('desktop') {
+            padding: 0 1rem;
+          }
+          list-style-type: none;
+          a {
+            color: $dark-grey;
+            text-transform: capitalize;
+            text-decoration: none;
+          }
+        }
+        @include breakpoint('desktop') {
+          display: flex;
+          flex-flow: row nowrap;
+        }
+      }
+      @include breakpoint('desktop') {
+        grid-area: footer-nav;
+        justify-self: flex-end;
+      }
+    }
+    @include breakpoint('desktop') {
+      display: grid;
+      grid-template-columns: [logo] 1fr [footer-nav]1fr;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+}
+.copyright-bar {
+  background: $light-grey;
+  padding: 1rem 2rem;
+  .copyright {
+    text-align: center;
+    padding-bottom: 2rem;
+    .copyright-text, .copyright-text a {
+      font-size: $small;
+      font-style: italic;
+      color: $dark-grey;
+      text-decoration: none;
+      .copyright-right {
+        text-transform: uppercase;
+        font-weight: $weight-regular;
+      }
+    }
+    @include breakpoint('desktop') {
+      grid-area: copyright;
+      text-align: left;
+      padding-bottom: 0;
+    }
+  }
+  .social-menu {
+    text-align: center;
+    a.social-icon {
+      text-decoration: none;
+      padding-left: 2rem;
+      font-size: $size-5;
+      color: $dark-grey;
+      svg {
+        &:hover {
+          animation: jelly 0.5s;
+        }
+      }
+    }
+    @include breakpoint('desktop') {
+    grid-area: social-menu;
+    justify-self: flex-end;
+    }
+  }
+  @include breakpoint('desktop') {
+    display: grid;
+    grid-template-columns: [copyright]1fr [social-menu]1fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -7,12 +7,15 @@
 
 @import 'abstracts/normalize';
 @import 'abstracts/variables';
-@import 'abstracts/mixins';
 @import 'abstracts/fonts';
+@import 'abstracts/mixins';
 @import 'abstracts/animations';
 
 @import 'base/typography';
 @import 'base/generic';
 
+@import 'components/buttons';
+
 @import 'layout/navigation';
-@import 'layout/page';
+@import 'layout/front-page';
+@import 'layout/footer';

@@ -24,7 +24,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header id="top" class="main-header">
+  <header id="top" class="karmic-header">
     <div class="header-container">
       <div class="navbar-brand">
           <a class="header-logo" href="<?php echo site_url(); ?>">

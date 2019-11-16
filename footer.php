@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -10,28 +11,46 @@
  * @version 1.0.0
  */
 ?>
-      <footer> 
-         <section class="footer-content container">
-            <div class="social-menu">
-               <?php if ( get_field( 'footer_logo', 'option' ) ) { ?>
-               <img src="<?php the_field( 'footer_logo', 'option' ); ?>" class="footer-logo">
-               <?php } ?>
-               <p class="social-footer-text">We Make Cool Shit For Brands That Give a Damn.</p>
-               <ul class="social-icons">
-                  <?php dynamic_sidebar( 'social-footer' ); ?>
-               </ul>
-            </div><!-- /.social-menu -->
-            <div class="footer-center"><?php dynamic_sidebar( 'footer-center' ); ?></div>
-            <div class="footer-right"><?php dynamic_sidebar( 'footer-right' ); ?></div>
-         </section><!-- /.footer-content -->
+<footer>
+  <section class="main-footer">
+    <a class="footer-logo-link" href="#top">
+      <img class="footer-logo" src="http://karmic.site/wp-content/themes/karmic/assets/img/karmic_h_logo.png" alt="">
+    </a>
+    <div class="footer-nav">
+      <?php
+      wp_nav_menu(
+        array(
+          'theme_location'    => 'footer',
+          'menu'              => 'footer',
+          'container'         => false,
+          'items_wrap'        => '<nav class="footer-navbar-items" id="footer-navbar-items" role="navigation">%3$s</nav>'
+        )
+      );
+      ?>
+    </div>
+  </section><!-- /.main-footer -->
+</footer>
+<div class="copyright-bar">
+  <div class="copyright">
+    <p class="copyright-text bold">
+      <a href="https://karmic.dev"> &copy; <?php echo date('Y'); ?></a> 
+      karmic<span class="highlight">.</span> <span class="copyright-right">&mdash; A Strategic Creative Agency</span>
+    </p>
+  </div><!-- /.copyright -->
+  <div class="social-menu">
+    <a class="social-icon" href="https://twitter.com/_karmicdev" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="social-icon" href="https://instagram.com/_karmicdev" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="social-icon" href="http://" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div><!-- /.social-menu -->
+</div>
 
-         <section class="copyright-section">
-            <div class="copyright container">
-                  <p class="copyright-text"><a href="https://karmic.dev">&copy; <?php echo date( 'Y' ); ?> Karmic Creative</a></p>
-            </div><!-- /.copyright -->
-         </section>
-      </footer>
+<?php wp_footer(); ?>
+</body>
 
-  <?php wp_footer(); ?>
-  </body>
 </html>

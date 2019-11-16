@@ -1,0 +1,490 @@
+.hero {
+  margin: 2em;
+  padding: 0;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  .hero-pretitle {
+    font-size: 1.25rem;
+    color: $primary;
+    font-weight: $weight-light;
+  }
+  .hero-text {
+    // TODO: if not using the .hero-title anymore, delete
+    // from front-page.php and delete these styles
+    .hero-title {
+      font-size: $size-3;
+      color: $dark;
+      padding-bottom: 0.5rem;
+      text-transform: lowercase;
+      @include breakpoint("tablet") {
+        font-size: $size-1;
+      }
+    }
+    .hero-subtitle {
+      font-size: $size-3;
+      color: $dark;
+      font-weight: $weight-bold;
+      line-height: 1.1;
+      letter-spacing: 1;
+      text-transform: lowercase;
+      @include breakpoint("tablet") {
+        font-size: $size-1;
+      }
+    }
+    .cursor {
+      border-right: 0.03em solid;
+      animation: caret 1s steps(1) infinite;
+    }
+    @include breakpoint("h-mobile") {
+      padding: 1rem 0;
+    }
+  }
+  .arrow-d {
+    font-size: $size-3;
+    color: $primary;
+  }
+  @include breakpoint("tablet") {
+    padding-top: 1em;
+  }
+}
+.benefits {
+  @include bg-gradient($white, $light-grey, vertical);
+  .benefit-title {
+    color: $dark;
+    margin-bottom: 1rem;
+  }
+  .benefit-text {
+    color: $text-color;
+    font-size: $size-5;
+    font-weight: $weight-medium;
+    margin: auto;
+    margin-bottom: 2rem;
+    max-width: 750px;
+    letter-spacing: 1.05px;
+  }
+  .benefit-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: $weight-light;
+    color: $text-color;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .quote-author {
+    font-size: $size-7;
+    color: $text-color;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    background: $primary;
+    font-size: $size-6;
+  }
+}
+.about {
+  background: $dark;
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    .about-left {
+      @include breakpoint("h-mobile") {
+        flex-basis: 40%;
+        padding-right: 2rem;
+      }
+      .about-title {
+        color: $white;
+        padding-bottom: 1rem;
+        @include breakpoint("h-mobile") {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .about-right {
+      p {
+        font-size: $size-5;
+        color: $white;
+      }
+      @include breakpoint("h-mobile") {
+        flex-basis: 50%;
+      }
+    }
+    @include breakpoint("h-mobile") {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  hr {
+    margin: 3rem auto;
+    border-color: $primary;
+  }
+  .services {
+    .service-title {
+      color: $white;
+      margin-bottom: 3rem;
+    }
+    .service-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .left {
+        font-size: $size-4;
+        order: 2;
+        h3.service-name {
+          color: $light;
+          margin-bottom: 0.5rem;
+          text-transform: capitalize;
+        }
+        .service-description {
+          color: $light;
+          margin-bottom: 2rem;
+          font-size: $size-6;
+          letter-spacing: 0.3px;
+        }
+        a.service-link {
+          font-size: $size-6;
+          color: $primary;
+          font-style: italic;
+          letter-spacing: 0.3px;
+          &:hover,
+          &:focus {
+            color: $light;
+            transition: $speed;
+          }
+        }
+        @include breakpoint("tablet") {
+          flex-basis: 50%;
+          order: 1;
+        }
+      }
+      .right {
+        font-size: $size-6;
+        letter-spacing: 1.1px;
+        order: 1;
+        margin-bottom: 1rem;
+        img.service-img {
+          border-radius: $radius;
+          filter: grayscale(70%);
+          &:hover {
+            filter: none;
+            transition: $speed;
+          }
+        }
+        @include breakpoint("tablet") {
+          flex-basis: 45%;
+          order: 2;
+          margin: auto;
+        }
+      }
+      @include breakpoint("tablet") {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+    .section-hr {
+      border-color: $grey;
+      margin: 4em auto;
+    }
+  }
+}
+.blog-feed {
+  background: $white;
+  .blog-intro {
+    padding-bottom: 2rem;
+    .section-title {
+      color: $dark;
+      margin-bottom: 0.5rem;
+    }
+    .section-subtitle {
+      margin-bottom: 2rem;
+      font-size: $size-6;
+      color: $dark-grey;
+      letter-spacing: 0.3px;
+    }
+  }
+  .blog-grid {
+    display: flex;
+    flex-direction: column;
+    .main-blog-card {
+      grid-column: main-blog;
+      margin-bottom: 2rem;
+      .main-blog-img {
+        grid-column: blog-img;
+        margin-bottom: 1rem;
+        img.blog-img {
+          border-radius: $radius;
+          &:hover {
+            filter: brightness(40%);
+          }
+          @include breakpoint("desktop") {
+            max-width: 450px !important;
+            height: 100%;
+            overflow: hidden;
+            text-indent: -50%;
+            object-fit: cover;
+            border-radius: 16px 0 0 16px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            padding-right: 1rem;
+          }
+          @include breakpoint("xl-desktop") {
+            max-width: 600px !important;
+          }
+        }
+      }
+      .main-blog-text {
+        grid-column: blog-text;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        @include breakpoint("desktop") {
+          justify-self: start;
+        }
+        a {
+          text-decoration: none;
+          h3.main-blog-title {
+            font-size: $size-4;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+            color: $primary;
+            &:hover {
+              text-decoration: underline;
+              transition: $speed;
+            }
+          }
+          &:hover {
+            transition: $speed;
+          }
+        }
+        span.blog-date-meta {
+          text-decoration: none;
+          margin: 0.5rem 0;
+          color: $dark-grey;
+        }
+        p.main-blog-excerpt {
+          font-size: $size-7;
+          padding-top: 2rem;
+          margin-bottom: 1rem;
+          color: $dark-grey;
+          a.read-more {
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+      @include breakpoint("desktop") {
+        display: grid;
+        grid-template-columns: [blog-img] 1fr [blog-text] 1fr;
+      }
+    }
+    .side-blog-cards {
+      grid-column: side-blog;
+      .blog-card {
+        position: relative;
+        img.blog-card-img {
+          width: 100%;
+          object-fit: contain;
+          border-radius: $radius;
+          filter: brightness(40%);
+          &:hover {
+            filter: none;
+            transition: $speed;
+          }
+        }
+        .blog-card-title {
+          margin: auto;
+          display: inline-block;
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          font-size: $size-4;
+          font-style: normal;
+          color: $white;
+        }
+        .blog-date-meta {
+          font-weight: $weight-regular;
+          color: $white;
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+        }
+      }
+      .blog-card:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+    @include breakpoint("desktop") {
+      display: grid;
+      grid-template-columns: [main-blog] 6fr [side-blog] 3fr;
+      gap: 2rem;
+    }
+  }
+}
+.ebook {
+  .ebook-text {
+    background: $white;
+    border-radius: 1rem 1rem 0 0;
+    padding: 2rem;
+    .ebook-meta {
+      font-size: $small;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $primary;
+    }
+    .ebook-title {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      font-size: $size-3;
+      color: $dark;
+    }
+    .ebook-subtitle {
+      margin-bottom: 1rem;
+      color: $dark-grey;
+      font-size: $size-7;
+    }
+    @include breakpoint("desktop") {
+      grid-area: ebook-text;
+      border-radius: 1rem 0 0 1rem;
+    }
+    .ebook-form {
+      .nf-form-fields-required {
+        font-size: $small;
+        font-style: italic;
+      }
+      .nf-response-msg p {
+        font-size: $size-7;
+        font-style: italic;
+        font-weight: $weight-medium;
+        letter-spacing: 1.1px;
+        margin-bottom: 1rem;
+        background: rgba($green, 0.4);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+      .nf-form-content {
+        padding-top: 2rem;
+      }
+      .form-item {
+        label {
+          font-weight: $weight-regular;
+          font-size: $size-7;
+          text-transform: uppercase;
+        }
+        .nf-field-label {
+          margin-bottom: 4px;
+        }
+        .form-element {
+          border-radius: $radius;
+          background: $white;
+          color: $text-color;
+          &:focus {
+            border-color: $primary;
+          }
+        }
+        .nf-error.field-wrap .nf-field-element::after {
+          border-radius: 0 16px 16px 0;
+          background: $primary;
+        }
+      }
+      .btn {
+        background: rgba($primary, 0.6);
+        padding: 1rem 2rem;
+        font-weight: $weight-medium;
+        text-transform: lowercase;
+        &:hover {
+          color: $white;
+          background: $primary;
+        }
+      }
+    }
+  }
+  .ebook-img {
+    img {
+      object-fit: cover;
+      background-position: center center;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 0 0 1rem 1rem;
+      @include breakpoint("desktop") {
+        border-radius: 0 1rem 1rem 0;
+      }
+    }
+    @include breakpoint("desktop") {
+      grid-area: ebook-img;
+    }
+  }
+  @include breakpoint("desktop") {
+    display: grid;
+    grid-template-columns: [ebook-text] 1fr [ebook-img] 1fr;
+    padding: 4em 6em;
+  }
+}
+.contact {
+  .contact-info {
+    .contact-title,
+    .email {
+      font-size: $size-4;
+      font-weight: $weight-bold;
+      text-transform: lowercase;
+      @include breakpoint("h-mobile") {
+        font-size: $size-3;
+      }
+      @include breakpoint("tablet") {
+        font-size: $size-2;
+      }
+      @include breakpoint("desktop") {
+        font-size: $size-1;
+      }
+    }
+    .email {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 4px;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 8px;
+        background-color: $primary;
+        border-radius: $radius-small;
+        transform-origin: bottom right;
+        transform: scaleX(0);
+        transition: transform 0.5s ease;
+      }
+      &:hover:before {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .contact-social {
+    letter-spacing: 0.7px;
+    padding-top: 6rem;
+    font-size: $size-6;
+    color: $white;
+
+    text-transform: lowercase;
+    .social-link {
+      color: $white;
+      //text-decoration-line: none;
+      font-weight: $weight-bold;
+      &:hover, &:focus {
+        font-style: italic;
+        color: $primary
+      }
+    }
+  }
+}

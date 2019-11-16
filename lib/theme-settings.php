@@ -93,7 +93,7 @@ function karmic_can_show_post_thumbnail() {
  * ------------------------------------------------------------------------ */
 add_filter( 'excerpt_length', 'karmic_excerpt_length', 999 );
 function karmic_excerpt_length( $length ) {
-	return 50;
+	return 20;
 }
 
 
@@ -102,7 +102,7 @@ function karmic_excerpt_length( $length ) {
  * ------------------------------------------------------------------------ */
 add_filter( 'excerpt_more', 'new_excerpt_more' );
  function new_excerpt_more( $more ) {
-	return '<br><a href=" ' . get_permalink() . ' " class="read-more btn">Read more</a>';
+	return '<br><br><a href=" ' . get_permalink() . ' " class="read-more">Read more »</a>';
 }
 
 
