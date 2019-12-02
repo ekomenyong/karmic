@@ -81,12 +81,7 @@ if ( ! function_exists( 'karmic_body_classes' ) ) {
 	}
 }
 
-/**
- * Determines if post thumbnail can be displayed.
- */
-function karmic_can_show_post_thumbnail() {
-	return apply_filters( 'karmic_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
-}
+
 
 /* ------------------------------------------------------------------------ *
  * SETS EXCERPT LENGTH, DEFAULT: 50 CHARACTERS
@@ -100,8 +95,8 @@ function karmic_excerpt_length( $length ) {
 /* ------------------------------------------------------------------------ *
  * REPLACES [...] IN EXCERPT WITH HYPERLINK TO POST
  * ------------------------------------------------------------------------ */
-add_filter( 'excerpt_more', 'new_excerpt_more' );
- function new_excerpt_more( $more ) {
+add_filter( 'excerpt_more', 'karmic_excerpt_more' );
+ function karmic_excerpt_more( $more ) {
 	return '<br><br><a href=" ' . get_permalink() . ' " class="read-more">Read more »</a>';
 }
 

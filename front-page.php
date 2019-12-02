@@ -12,25 +12,27 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  * 
- * @package WP Karmic WordPress Framework
+ * @package karmic
  * @version 1.0.0
  */ get_header(); ?>
 <main role="main">
   <section class="hero">
-    <p class="hero-pretitle">A Strategic Design & Development Agency</p>
+    <p class="hero-pretitle">A Strategic Creative Agency</p>
     <div class="hero-text">
       <!-- <h2 class="hero-title">Hi, we're karmic<span class="highlight">.</span></h2> -->
       <p class="hero-subtitle"><span class="typewriter">We make cool shit for brands that give a damn</span><span class="highlight">.</span></p>
     </div>
-    <i class="far fa-angle-double-down bounce arrow-d"></i>
+    <a class="bounce arrow-d" href="#benefits">
+      <i class="far fa-angle-double-down"></i>
+    </a>
 
   </section><!-- /section.hero -->
-  <section class="benefits center">
+  <section id="benefits" class="benefits center">
     <h2 class="benefit-title">Disrupt or be disrupted<span class="highlight">.</span></h2>
     <p class="benefit-text">
-      It’s time to <span class="highlight">rethink</span> the traditional agency
-      experience and partner with passionate and talented
-      <span class="highlight">creative strategists</span> that give a <span class="highlight">damn</span>.
+      It’s time to <span class="highlight">rethinkthe traditional agency
+      experience </span> and partner with passionate and talented
+      creative strategists that <span class="highlight">give a damn</span>.
     </p>
     <p class="benefit-quote">
       “The unfortunate truth is that traditionalists
@@ -43,7 +45,7 @@
       &mdash; <span class="highlight semi-bold">Paul Roetzer</span>,
       The Marketing Agency Blueprint
     </p>
-    <a href="/about" class="btn">why karmic? <i class="far fa-angle-double-right"></i></a>
+    <a href="/about" class="btn">why choose karmic? <i class="far fa-angle-double-right"></i></a>
   </section><!-- /section.benefits -->
   <section class="about">
     <div class="about-content">
@@ -68,7 +70,10 @@
       <div class="service-row">
         <div class="left">
           <h3 class="service-name">Branding & Identity<span class="highlight">.</span></h3>
-          <p class="service-description">
+          
+        </div>
+        <div class="right">
+        <p class="service-description">
             The future of your brand rests on the experiences
             people have with your products and platforms. We
             create a visual indentity and brand strategy so
@@ -76,16 +81,15 @@
           </p>
           <a class="service-link" href="">Branding & Identity »</a>
         </div>
-        <div class="right">
-          <img class="service-img" src="http://karmic.site/wp-content/themes/karmic/assets/img/branding-airplanes.jpg" alt="">
-        </div>
       </div><!-- /.service-row -->
       <hr class="section-hr" />
 
       <div class="service-row">
         <div class="left">
           <h3 class="service-name">Strategy & Consulting<span class="highlight">.</span></h3>
-          <p class="service-description">
+        </div>
+        <div class="right">
+        <p class="service-description">
             Our disruptive, innovative thinking combined with
             our creative human-centric mindset, allows us to
             change businesses. We translate your business
@@ -93,25 +97,21 @@
           </p>
           <a class="service-link" href="">Strategy & Consulting »</a>
         </div>
-        <div class="right">
-          <img class="service-img" src="http://karmic.site/wp-content/themes/karmic/assets/img/strategy-chess.jpg" alt="">
-        </div>
       </div><!-- /.service-row -->
       <hr class="section-hr" />
 
       <div class="service-row">
         <div class="left">
           <h3 class="service-name">Design & Development<span class="highlight">.</span></h3>
-          <p class="service-description">
-            Beautiful user-centric designs coupled with high-quality
-            modern development are at the foundation of what we do.
-            We create bespoke digital interfaces that fuel
-            user engagement with your brand.
-          </p>
-          <a class="service-link" href="">Design & Development »</a>
         </div>
         <div class="right">
-          <img class="service-img" src="http://karmic.site/wp-content/themes/karmic/assets/img/development-overhead.jpg" alt="">
+          <p class="service-description">
+              Beautiful user-centric designs coupled with high-quality
+              modern development are at the foundation of what we do.
+              We create bespoke digital interfaces that fuel
+              user engagement with your brand.
+            </p>
+            <a class="service-link" href="">Design & Development »</a>
         </div>
       </div><!-- /.service-row -->
       <hr class="section-hr" />
@@ -119,15 +119,14 @@
       <div class="service-row">
         <div class="left">
           <h3 class="service-name">Marketing & Campaigns<span class="highlight">.</span></h3>
+        </div>
+        <div class="right">
           <p class="service-description">
             Data-driven and optimized digital strategies focused on
             engaging users ensure we reach the right users, at the
             right place, at the right time.
           </p>
           <a class="service-link" href="">Marketing & Campaigns »</a>
-        </div>
-        <div class="right">
-          <img class="service-img" src="http://karmic.site/wp-content/themes/karmic/assets/img/marketing-devices.jpg" alt="">
         </div>
       </div><!-- /.service-row -->
 
@@ -216,7 +215,7 @@
     </div>
     <div class="ebook-img"> 
       <!-- TODO: Insert ebook mockup photo! -->
-      <img src="http://karmic.site/wp-content/themes/karmic/assets/img/development-overhead.jpg" alt="">
+      <img src="http://karmic.local/wp-content/themes/karmic/assets/img/development-overhead.jpg" alt="">
     </div>
   </section><!-- /section.ebook -->
   

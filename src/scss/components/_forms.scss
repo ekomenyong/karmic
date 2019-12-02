@@ -1,0 +1,52 @@
+.ebook-text {
+  .nf-form-fields-required {
+    font-size: $small;
+    font-style: italic;
+  }
+  .nf-response-msg p {
+    font-size: $size-7;
+    font-style: italic;
+    font-weight: $weight-medium;
+    letter-spacing: 1.1px;
+    margin-bottom: 1rem;
+    background: rgba($green, 0.4);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .nf-form-content {
+    padding-top: 2rem;
+  }
+  .form-item {
+    label {
+      font-weight: $weight-regular;
+      font-size: $size-7;
+      text-transform: uppercase;
+    }
+    .nf-field-label {
+      margin-bottom: 4px;
+    }
+    .form-element {
+      border-radius: $radius;
+      background: $white;
+      color: $text-color;
+      &:focus {
+        border-color: $primary;
+      }
+    }
+    .nf-error.field-wrap .nf-field-element::after {
+      border-radius: 0 16px 16px 0;
+      background: $primary;
+    }
+  }
+  .btn {
+    background: rgba($primary, 0.6);
+    padding: 1rem 2rem;
+    font-weight: $weight-medium;
+    text-transform: lowercase;
+    &:hover {
+      color: $white;
+      background: $primary;
+    }
+  }
+  
+}

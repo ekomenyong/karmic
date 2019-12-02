@@ -21,7 +21,7 @@ header.karmic-header {
       }
       .menu-icon svg {
         font-size: $size-4;
-        color: $dark;
+        color: $primary;
         &:hover, &:focus {
           cursor: pointer;
           animation: jelly 0.5s;
@@ -39,7 +39,7 @@ header.karmic-header {
       left: 0;
       top: 0;
       background: $primary;
-      overflow-y: auto;
+      overflow: auto;
       transition: 0.5s;
       .overlay-header {
         display: flex;
@@ -67,9 +67,6 @@ header.karmic-header {
             animation: jelly 0.5s;
             cursor: pointer;
           }
-        }
-        @include breakpoint( 'tablet' ) {
-          margin: 1em 3em;
         }
       }
       .navbar-items {
@@ -106,5 +103,8 @@ header.karmic-header {
         }
       }
     }
+  }
+  @include breakpoint('tablet') {
+    margin: 0;
   }
 }

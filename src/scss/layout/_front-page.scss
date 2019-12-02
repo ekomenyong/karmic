@@ -8,24 +8,24 @@
   align-items: flex-start;
   .hero-pretitle {
     font-size: 1.25rem;
-    color: $primary;
+    color: $white;
     font-weight: $weight-light;
   }
   .hero-text {
     // TODO: if not using the .hero-title anymore, delete
-    // from front-page.php and delete these styles
-    .hero-title {
-      font-size: $size-3;
-      color: $dark;
-      padding-bottom: 0.5rem;
-      text-transform: lowercase;
-      @include breakpoint("tablet") {
-        font-size: $size-1;
-      }
-    }
+    // TODO: from front-page.php and delete these styles
+    // .hero-title {
+    //   font-size: $size-3;
+    //   color: $white;
+    //   padding-bottom: 0.5rem;
+    //   text-transform: lowercase;
+    //   @include breakpoint("tablet") {
+    //     font-size: $size-1;
+    //   }
+    // }
     .hero-subtitle {
       font-size: $size-3;
-      color: $dark;
+      color: $white;
       font-weight: $weight-bold;
       line-height: 1.1;
       letter-spacing: 1;
@@ -45,13 +45,17 @@
   .arrow-d {
     font-size: $size-3;
     color: $primary;
+    &:hover {
+      cursor: pointer;
+      transition: $speed;
+    }
   }
   @include breakpoint("tablet") {
     padding-top: 1em;
   }
 }
 .benefits {
-  @include bg-gradient($white, $light-grey, vertical);
+  background: $white;
   .benefit-title {
     color: $dark;
     margin-bottom: 1rem;
@@ -120,7 +124,7 @@
   }
   hr {
     margin: 3rem auto;
-    border-color: $primary;
+    border: 0.5px solid $primary;
   }
   .services {
     .service-title {
@@ -132,13 +136,18 @@
       flex-direction: column;
       justify-content: center;
       .left {
-        font-size: $size-4;
-        order: 2;
         h3.service-name {
           color: $light;
           margin-bottom: 0.5rem;
-          text-transform: capitalize;
         }
+        @include breakpoint("tablet") {
+          flex-basis: 50%;
+        }
+      }
+      .right {
+        font-size: $size-6;
+        letter-spacing: 1.1px;
+        margin-bottom: 1rem;
         .service-description {
           color: $light;
           margin-bottom: 2rem;
@@ -150,6 +159,7 @@
           color: $primary;
           font-style: italic;
           letter-spacing: 0.3px;
+          text-decoration: none;
           &:hover,
           &:focus {
             color: $light;
@@ -158,25 +168,6 @@
         }
         @include breakpoint("tablet") {
           flex-basis: 50%;
-          order: 1;
-        }
-      }
-      .right {
-        font-size: $size-6;
-        letter-spacing: 1.1px;
-        order: 1;
-        margin-bottom: 1rem;
-        img.service-img {
-          border-radius: $radius;
-          filter: grayscale(70%);
-          &:hover {
-            filter: none;
-            transition: $speed;
-          }
-        }
-        @include breakpoint("tablet") {
-          flex-basis: 45%;
-          order: 2;
           margin: auto;
         }
       }
@@ -352,57 +343,6 @@
     @include breakpoint("desktop") {
       grid-area: ebook-text;
       border-radius: 1rem 0 0 1rem;
-    }
-    .ebook-form {
-      .nf-form-fields-required {
-        font-size: $small;
-        font-style: italic;
-      }
-      .nf-response-msg p {
-        font-size: $size-7;
-        font-style: italic;
-        font-weight: $weight-medium;
-        letter-spacing: 1.1px;
-        margin-bottom: 1rem;
-        background: rgba($green, 0.4);
-        border-radius: 1rem;
-        padding: 1rem;
-      }
-      .nf-form-content {
-        padding-top: 2rem;
-      }
-      .form-item {
-        label {
-          font-weight: $weight-regular;
-          font-size: $size-7;
-          text-transform: uppercase;
-        }
-        .nf-field-label {
-          margin-bottom: 4px;
-        }
-        .form-element {
-          border-radius: $radius;
-          background: $white;
-          color: $text-color;
-          &:focus {
-            border-color: $primary;
-          }
-        }
-        .nf-error.field-wrap .nf-field-element::after {
-          border-radius: 0 16px 16px 0;
-          background: $primary;
-        }
-      }
-      .btn {
-        background: rgba($primary, 0.6);
-        padding: 1rem 2rem;
-        font-weight: $weight-medium;
-        text-transform: lowercase;
-        &:hover {
-          color: $white;
-          background: $primary;
-        }
-      }
     }
   }
   .ebook-img {

@@ -28,8 +28,7 @@ if ( ! function_exists( 'karmic_scripts' ) ) {
       wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', '', '3.4.1', true );
       wp_enqueue_script( 'karmic-scripts', KARMIC_THEME_DIR . '/assets/js/main.min.js', array(), $js_version, true );
       wp_enqueue_script( 'vendor-scripts', KARMIC_THEME_DIR . '/assets/js/vendors.min.js', array(), $js_version, true );
-      wp_enqueue_script( 'font-awesome', KARMIC_THEME_DIR . '/assets/js/all.min.js', array(), '5.7.2', true );
-      
+      wp_enqueue_script( 'fontawesome', KARMIC_THEME_DIR . '/assets/js/all.min.js', array(), '5.11.2', true );
       
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
       wp_enqueue_script( 'comment-reply' );

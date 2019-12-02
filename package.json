@@ -8,7 +8,7 @@
   "license": "UNLICENSED",
   "private": true,
   "vars": {
-    "projectURL": "karmic.site",
+    "projectURL": "karmic.local",
     "productURL": "./",
     "browserAutoOpen": false,
     "injectChanges": true,
@@ -103,5 +103,8 @@
     "clearCache": "gulp clearCache",
     "translate": "gulp translate"
   },
-  "homepage": "https://karmic.dev"
+  "homepage": "https://karmic.dev",
+  "dependencies": {
+    "insights-js": "^1.2.9"
+  }
 }
